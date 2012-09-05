@@ -1,0 +1,86 @@
+UseRandomSeed 0
+RandomSeed 10483
+competition 0
+invasion 0
+acceptfunction 1
+dispersaltype 4
+* Following three parameters only apply to the 'smart' acceptance rule
+MinSearch 25
+AcceptSensitivity 40.0
+BaseAccept 0.3
+invaderdt 3
+invaderaf 0
+MaxYears 100
+ExtinctionTest 0
+MaxReps  1
+PrintSurv 0
+NewLand 1
+Xsize 129
+Ysize 129
+Sides 8  *  hexagonal Neighborhood
+QThreshold  0
+SampleSep 3
+SampleInt 1
+nSamples 500
+* Random = 0x06, Stratified = 0x07, Regular = 0x08
+Stratify 6
+* Deathwatch now requires marking, available by turning on cohort sampling
+DeathWatch 0
+SampleLocation 0
+ReportEveryYear 1
+ReportVariance 0
+CensusHabitat 0
+CHabitatFile hcensus.txt
+SampleHabitat 100
+SampleCohort 0
+* NB! only turn on SampleRep if LocateAll is off, and only 6 runs planned
+SampleRep 0
+LocateAll 0
+MapAll 1
+RandomSensitivity 0
+RandomFile randvar1.txt
+HabitatFile land2x30.in
+LogisticFile test3.txt
+StratifyFile stratify.txt
+TransitFile ggf9tran.txt
+ESRIFile hq.asc
+NumLayers   1
+PatchLayer 0
+Qpivot    90
+SurvLayer 0
+SurvSlope 0.0
+BirthLayer 0
+BirthSlope 1.0
+FMultiplier 1.0
+DispMort 0.005
+*TurnDist is the cumulative probability of turning by the index amount, with
+*straight ahead centered, and the end two "wrapped"
+randomalpha 0
+alpha 0.0
+minalpha 1.0
+maxalpha 3.0
+*TurnDist  7
+*0.00508777
+*0.103515625
+*0.346619406
+*0.653380594
+*0.896484375
+*0.99491223
+*1
+
+* Ageclasses start with 0
+MaxAgeClass 2
+BirthRate   3
+        0
+        0
+        0.45
+
+DeathRate   3
+        0.45
+        0.15
+        0.15
+
+AgeStruc 3
+        0
+        0
+        300

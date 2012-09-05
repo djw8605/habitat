@@ -1,0 +1,25 @@
+* make hdim < 0 to create totally random landscape
+hdim 0.5
+fracvar 1.0
+meanval 2
+50
+50
+varval 2
+5
+5
+varbump 2
+4
+4
+lowcut 2
+0
+0
+highcut 2
+100
+100
+numdents 2
+500
+500
+xsize 129
+ysize 129
+numlayers 2
+HabitatFile Land2x30.in
