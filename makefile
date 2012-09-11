@@ -22,7 +22,7 @@ all : $(LINK_TARGET)
 	echo All done
 
 $(LINK_TARGET) : $(OBJS)	
-	g++ -g -o $@ $^
+	g++ -g -L/home/swanson/dweitzel/google-prof/lib -lprofiler -o $@ $^ 
 
 %.o : %.cpp	
 	g++ -g -o $@ -c $<
