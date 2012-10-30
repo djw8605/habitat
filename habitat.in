@@ -10,13 +10,13 @@ AcceptSensitivity 40.0
 BaseAccept 0.3
 invaderdt 3
 invaderaf 0
-MaxYears 100
+MaxYears 1000
 ExtinctionTest 0
 MaxReps  1
 PrintSurv 0
 NewLand 1
-Xsize 129
-Ysize 129
+Xsize 500
+Ysize 500
 Sides 8  *  hexagonal Neighborhood
 QThreshold  0
 SampleSep 3
@@ -83,4 +83,4 @@ DeathRate   3
 AgeStruc 3
         0
         0
-        300
+        800

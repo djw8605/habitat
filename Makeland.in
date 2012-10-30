@@ -19,7 +19,7 @@ highcut 2
 numdents 2
 500
 500
-xsize 129
-ysize 129
+xsize 500
+ysize 500
 numlayers 2
 HabitatFile Land2x30.in
