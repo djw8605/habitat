@@ -19,13 +19,13 @@ clean :
 	echo Clean done
  
 all : $(LINK_TARGET)	
-	echo All done
+	echo All done 
 
 $(LINK_TARGET) : $(OBJS)	
-	g++ -g -o $@ $^
+	g++ -fopenmp -g -o $@ $^ 
 
 %.o : %.cpp	
-	g++ -g -o $@ -c $<
+	g++ -fopenmp -g -o $@ -c $< 
 
 ecologst.o : ecologst.h glider.h habitat.h landscpe.h linked.h queue.h util98.h
 glider.o : glider.h habitat.h landscpe.h linked.h queue.h util98.h

@@ -34,6 +34,7 @@ LinkList *InitPop(LinkList *L, Parameters *Pm){
   int dt = 0, af = 0;
   int a;
   Individual *I;
+  omp_init_lock(&TheGodGlider.mp_indiv_lock);
   for(a=0;a<=Pm->MaxAgeClass;a++){
     for(j=0;j<(Pm->AgeStruc)[a];j++){
         I = Birth(&TheGodGlider, Pm);
@@ -102,6 +103,9 @@ Individual *Birth(Individual *Parent, Parameters *Pm){
         NewInd->numbumps = 0;
         NewInd->numbumped = 0;
         NewInd->queuepos = 0;
+
+        omp_init_lock(&NewInd->mp_indiv_lock);
+
         if ((Parent->tdist[0] == 0.0) && (Pm->dispersaltype==3))
             fillturndist(NewInd,Pm);
         else
@@ -121,6 +125,7 @@ int Death(Individual **I, float rate, LinkList *Population, LandScape *L){
     TempInd = (*I)->PrevInd;    /* remember the previous individual */
     DeleteList(Population,*I);  /* delete the individual from the population */
     L->Map[(*I)->Where] = NULL;             /* empty map location */
+    omp_destroy_lock(&(*I)->mp_indiv_lock);
     free((void *) *I);  /* destroy the individual */
     *I = TempInd;           /* set the current individual to be the previous one */
 

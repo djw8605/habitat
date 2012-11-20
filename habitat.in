@@ -10,7 +10,7 @@ AcceptSensitivity 40.0
 BaseAccept 0.3
 invaderdt 3
 invaderaf 0
-MaxYears 100
+MaxYears 1000
 ExtinctionTest 0
 MaxReps  1
 PrintSurv 0

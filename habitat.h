@@ -18,6 +18,7 @@ Written by: Drew Tyre, Dept. of Environmental Science and Management,
 **********************************************************************/
 
 #include <math.h>
+#include <omp.h>
 /* Number of neighbors for different neighborhoods */
 #define ORTHO 4
 #define HEX 6
@@ -146,6 +147,9 @@ struct Ind{
    int numbumped;
     int queuepos;
     float tdist[MAXSIDES + 1];  /* this is the turning distribution */
+
+    // OpenMP lock
+    omp_lock_t mp_indiv_lock;
 };
 
 typedef struct Ind Individual;
@@ -161,6 +165,8 @@ struct LS{
     int NumLayers;
     int Xsize;
     int Ysize;
+
+    omp_lock_t *CellLocks;
 };
 typedef struct LS LandScape;
 

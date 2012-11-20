@@ -1,4 +1,6 @@
+
 #include <stdlib.h>
+
 //---------------------------------------------------------------------------
 #include "util98.h"
 #include "mt19937.h"
@@ -7,7 +9,6 @@
 
 #include <stdio.h>
 #include <stddef.h>
-
 #include <string.h>
 #include <math.h>
 

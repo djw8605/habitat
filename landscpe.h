@@ -34,7 +34,6 @@ void TruncLand(HQuality **L, HQuality low[], HQuality high[], Parameters *Pm);
 void ClearLand(HQuality L[], HQuality value, Parameters *Pm);
 void WriteLand(HQuality **L, FILE *outfile, Parameters *Pm);
 
-
 #define A 0.5774
 #define TWOA 1.1547
 #define B (float) (2/3)
@@ -44,6 +43,10 @@ void WriteLand(HQuality **L, FILE *outfile, Parameters *Pm);
 #define MAXMAXLEVEL 7
 
 #define cAVERAGE 0x00
+
+// Parameters for offset (had to be moved to the .h because it is going to be used in the habitat.c)
+#define MAXBOUNDARYTYPE 12
+#define MAXDIRECTION FULLSQR
 
 #endif
  

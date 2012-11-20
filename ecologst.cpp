@@ -78,7 +78,7 @@ int RandomSites(LandScape *L, Parameters *Pm)
 		picked[j] = 1;
 		SampleSites[i] = j;
 	}
-
+    free(picked);
 	return 0;
 }
 
@@ -353,7 +353,7 @@ int MapAll(int run, int rep, int year, int gridsize, LinkList *P, LandScape *L, 
 		else {
 			age = 0;
 		}
-		fprintf(mapfile,"%-5d%-5d%-5d%-5d%-5d%-5d%-5d%-5d\n",run, rep, year, CurInd->Age,occupied,
+		fprintf(mapfile,"%-5d%-5d%-5d%-5d%-5d%-5d%-5d%-5d\n",run, rep, year, age,occupied,
 		i / gridsize, i % gridsize, habitat);
 	}
 	return 0;

@@ -13,11 +13,15 @@ Written by: Drew Tyre, Dept. of Environmental Science and Management,
             email: dtyre@roseworthy.adelaide.edu.au
 *************************************************************************/
 
+#include <omp.h>
 #include "habitat.h"
 
 struct Q{
   Individual *Head;
   Individual *Tail;
+
+  // OpenMP lock
+  omp_lock_t mp_lock;
 };
 
 typedef struct Q Queue;
