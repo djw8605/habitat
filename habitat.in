@@ -15,8 +15,8 @@ ExtinctionTest 0
 MaxReps  1
 PrintSurv 0
 NewLand 1
-Xsize 129
-Ysize 129
+Xsize 5000
+Ysize 5000
 Sides 8  *  hexagonal Neighborhood
 QThreshold  0
 SampleSep 3
@@ -83,4 +83,4 @@ DeathRate   3
 AgeStruc 3
         0
         0
-        300
+        500000
