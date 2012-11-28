@@ -147,6 +147,7 @@ struct Ind{
    int numbumped;
     int queuepos;
     float tdist[MAXSIDES + 1];  /* this is the turning distribution */
+    int freed;
 
     // OpenMP lock
     omp_lock_t mp_indiv_lock;

@@ -126,7 +126,8 @@ int Death(Individual **I, float rate, LinkList *Population, LandScape *L){
     DeleteList(Population,*I);  /* delete the individual from the population */
     L->Map[(*I)->Where] = NULL;             /* empty map location */
     omp_destroy_lock(&(*I)->mp_indiv_lock);
-    free((void *) *I);  /* destroy the individual */
+    //free((void *) *I);  /* destroy the individual */
+    free(*I);  /* destroy the individual */
     *I = TempInd;           /* set the current individual to be the previous one */
 
     return 1;
