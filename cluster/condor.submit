@@ -1,0 +1,18 @@
+universe = vanilla
+
+executable = habitat.exe
+transfer_input_files = habitat.in, makeland.in 
+
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+output = condor_out/output.$(CLUSTER).$(PROCESS)
+error = condor_out/error.$(CLUSTER).$(PROCESS)
+log = habitat.log
+
+environment = "OMP_NUM_THREADS=8"
+
+request_cpus = 8
+request_memory = 4000
+
+queue 30
