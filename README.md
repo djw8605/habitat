@@ -36,4 +36,24 @@ Running of habitat.exe is by simplying starting it:
     $ ./habitat.exe
 
 
+Submitting to a Cluster
+-----------------------
+
+Submission files are provided for Condor, PBS, and Slurm to run the simulation.
+
+### Condor
+Condor sumbission is done with the `cluster/condor.submit` file.  It will
+automatically copy back any output files back to the submission host.
+
+
+### PBS
+PBS submission is done with `cluster/pbs.sh`.  It will copy back the output
+file in a uniquely named directory in the submission directory.
+
+### Slurm
+SLURM submission is done with `cluster/slurm.sh`.  It will copy back the
+output into the submission directory.
+
+
+
 
